@@ -1,7 +1,7 @@
 #include "DiskInfo.h"
 DiskInfo::DiskInfo(HANDLE handle,BYTE deviceData[]) 
 {
-	handle = handle;
+	this->handle = handle;
 	convertATAString(deviceData);
 	apmSupport = isAPMFeatureSetSupported(deviceData[APM_SUPPORTED_BYTE_NUMBER]);
 	apmEnabled = isAPMFeatureEnabled(deviceData[APM_ENABLED_BYTE_NUMBER]);
