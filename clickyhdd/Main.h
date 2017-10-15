@@ -12,6 +12,7 @@ struct ATA_PASS_THROUGH_EX_WITH_BUFFER
 	BYTE dataBuf[512];
 };
 int getAPMLevel(BYTE b);
+void oldMain();
 void EnumDevices(std::vector<HANDLE> &v);
 ATA_PASS_THROUGH_EX_WITH_BUFFER makeBuffer();
 void SendIdentifyCommand(HANDLE disk, ATA_PASS_THROUGH_EX_WITH_BUFFER ab, std::vector<DiskInfo> &d);

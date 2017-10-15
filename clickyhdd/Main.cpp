@@ -2,8 +2,11 @@
 #define UNICODE 1
 #define _UNICODE 1
 
-
-int main() {
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) {
+	oldMain();
+	return 0;
+}
+void oldMain() {
 	std::vector<DiskInfo> ATADisks;
 	std::vector<HANDLE> devices;
 	EnumDevices(devices);
